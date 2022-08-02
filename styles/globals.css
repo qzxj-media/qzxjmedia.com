@@ -5,10 +5,12 @@
 }
 
 html,
-body {
+body,
+#__next {
   padding: 0;
   margin: 0;
   font-family: 'Nunito Sans', sans-serif;
+  min-height: 97vh;
 }
 
 a {

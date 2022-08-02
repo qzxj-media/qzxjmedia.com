@@ -8,6 +8,7 @@ import { tagsToString } from '../../lib/tag-utils'
 import { useRouter } from 'next/router'
 import { useDevlogPost } from '../../lib/use-devlog-post'
 import { Container } from '@chakra-ui/react'
+import Section from '../../components/section'
 
 const DevlogPost: NextPage = () => {
   const router = useRouter()
@@ -19,17 +20,21 @@ const DevlogPost: NextPage = () => {
     <Layout title={title}>
       {!isLoading && (
         <Container>
-          <components.h1>{title}</components.h1>
-          <components.h3>{excerpt}</components.h3>
-          <br />
-          <components.h3>Author: {author}</components.h3>
-          <components.h3>
-            Publish Date: {formatDateString(publishDate)}
-          </components.h3>
-          <components.h3>Tags: {tagsToString(tags)}</components.h3>
-          <MyDivider />
-          {/* @ts-ignore */}
-          <MDXRemote {...mdxSource} components={components} />
+          <Section>
+            <components.h1>{title}</components.h1>
+            <components.h3>{excerpt}</components.h3>
+            <br />
+            <components.h3>Author: {author}</components.h3>
+            <components.h3>
+              Publish Date: {formatDateString(publishDate)}
+            </components.h3>
+            <components.h3>Tags: {tagsToString(tags)}</components.h3>
+            <MyDivider />
+          </Section>
+          <Section delay={0.1}>
+            {/* @ts-ignore */}
+            <MDXRemote {...mdxSource} components={components} />
+          </Section>
         </Container>
       )}
     </Layout>

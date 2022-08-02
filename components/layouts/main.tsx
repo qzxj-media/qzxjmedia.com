@@ -12,7 +12,7 @@ interface Props {
 
 const Main: NextPage<Props> = ({ children, router }) => {
   return (
-    <Box as="main" pb={8}>
+    <Box as="main" pb={4}>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>qzxj media - homepage</title>
@@ -20,7 +20,13 @@ const Main: NextPage<Props> = ({ children, router }) => {
 
       <Navbar path={router.asPath} />
 
-      <Container maxW="container.md" pt={20}>
+      <Container
+        maxW="container.md"
+        pt={20}
+        minHeight="97vh"
+        display="flex"
+        flexDirection="column"
+      >
         {children}
 
         <Footer />
