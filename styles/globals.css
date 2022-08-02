@@ -1,9 +1,14 @@
+@font-face {
+  font-family: 'ShoraiSans';
+  src: url('../fonts/ShoraiSans/shorai_sans_heavy.woff2') format('woff2'),
+    url('../fonts/ShoraiSans/shorai_sans_heavy.woff') format('woff');
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 a {
@@ -13,14 +18,4 @@ a {
 
 * {
   box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
 }

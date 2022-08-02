@@ -1,0 +1,5 @@
+{
+  "prettier.configPath": "prettier.config.js",
+  "editor.tabSize": 2,
+  "editor.detectIndentation": true
+}
